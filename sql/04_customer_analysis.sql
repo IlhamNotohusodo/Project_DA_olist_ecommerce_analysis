@@ -87,3 +87,20 @@ SELECT COUNT(*)                                   AS total_pelanggan,
        SUM(n_order > 1)                           AS repeat_customer,
        ROUND(100 * SUM(n_order > 1) / COUNT(*), 2) AS pct_repeat
 FROM cust;
+
+-- =====================================================
+-- C4b. Distribusi jumlah order per pelanggan
+-- =====================================================
+WITH cust AS (
+    SELECT c.customer_unique_id,
+           COUNT(DISTINCT o.order_id) AS n_order
+    FROM orders o
+    JOIN customers c ON o.customer_id = c.customer_id
+    WHERE o.order_status = 'delivered'
+    GROUP BY c.customer_unique_id
+)
+SELECT n_order AS jumlah_order_per_pelanggan,
+       COUNT(*) AS jumlah_pelanggan
+FROM cust
+GROUP BY n_order
+ORDER BY n_order;
