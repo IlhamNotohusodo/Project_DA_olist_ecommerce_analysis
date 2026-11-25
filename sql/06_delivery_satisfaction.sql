@@ -77,3 +77,22 @@ SELECT ROUND(AVG(r.review_score), 2) AS rata_rating,
 FROM order_reviews r
 JOIN orders o ON r.order_id = o.order_id
 WHERE o.order_status = 'delivered';
+
+-- E2b,  -State dengan keterlambatan tertinggi
+
+
+SELECT c.customer_state                                   AS state,
+       COUNT(*)                                           AS total_order,
+       SUM(o.is_late = 1)                                 AS order_terlambat,
+       ROUND(100 * SUM(o.is_late = 1) / COUNT(*), 2)      AS pct_terlambat,
+       ROUND(AVG(o.delivery_days), 1)                     AS rata_hari_kirim
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE o.order_status = 'delivered'
+  AND o.order_delivered_customer_date IS NOT NULL
+GROUP BY c.customer_state
+HAVING COUNT(*) >= 500
+ORDER BY pct_terlambat DESC
+LIMIT 10;
+
+

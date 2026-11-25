@@ -69,43 +69,43 @@ Project_DA_olist_ecommerce_analysis/
 
 Keputusan utama saat cleaning (isi dengan angka dari notebook):
 
-1. Dari **[JUMLAH]** order, **[JUMLAH]** berstatus `delivered`. Status lain (canceled, shipped, dll.) dikeluarkan dari analisis revenue.
-2. **[JUMLAH]** order `delivered` tidak punya tanggal tiba, sehingga dikeluarkan dari analisis pengiriman.
-3. **[JUMLAH]** order punya lebih dari satu review. Diambil review terbaru agar join tidak menggandakan baris.
-4. **[JUMLAH]** produk tanpa kategori diisi `unknown`.
-5. **[JUMLAH]** kategori tanpa terjemahan ditambahkan manual (`pc_gamer`, `portateis_cozinha_e_preparadores_de_alimentos`).
+1. Dari **[99441]** order, **[96478]** berstatus `delivered`. Status lain (canceled, shipped, dll.) dikeluarkan dari analisis revenue.
+2. **[8]** order `delivered` tidak punya tanggal tiba, sehingga dikeluarkan dari analisis pengiriman.
+3. **[547]** order punya lebih dari satu review. Diambil review terbaru agar join tidak menggandakan baris.
+4. **[610]** produk tanpa kategori diisi `unknown`.
+5. **[2]** kategori tanpa terjemahan ditambahkan manual (`pc_gamer`, `portateis_cozinha_e_preparadores_de_alimentos`).
 6. Satu order bisa punya banyak item dan banyak baris pembayaran. Semua agregasi memakai `COUNT(DISTINCT order_id)` atau dihitung per order dulu untuk mencegah penghitungan ganda (*fan-out*).
 
 ## 8. Temuan Utama
 
 ### A. Sales Performance
-- Total revenue **R$ [ANGKA]** dari **[JUMLAH]** order, dengan AOV **R$ [ANGKA]**.
-- Bulan dengan revenue tertinggi: **[BULAN]** (R$ [ANGKA]).
-- Tren: **[naik / turun / stabil, dan kapan]**.
+- Total revenue **R$ 13221498.11** dari **[96.478]** order, dengan AOV **R$ 137.04**.
+- Bulan dengan revenue tertinggi: **[November 2017]** (R$ 987.765,37).
+- Tren: - Tren: revenue **naik hampir terus-menerus sepanjang 2017**, dari sekitar R$ 0,1 juta pada Januari 2017 hingga puncak **R$ 987.765,37 pada November 2017**. Setelah turun di Desember 2017 (sekitar R$ 0,72 juta), revenue **cenderung stabil** di kisaran R$ 0,82 sampai 0,97 juta per bulan sepanjang 2018 (sampai Agustus). Data 2016 dan September sampai Oktober 2018 tidak lengkap, jadi penurunan di ujung periode bukan penurunan bisnis.
 
 ### B. Product Performance
-- Kategori terlaris berdasarkan unit: **[KATEGORI]** ([JUMLAH] unit).
-- Kategori dengan revenue tertinggi: **[KATEGORI]** (R$ [ANGKA], [X]% dari total).
-- Perbedaan keduanya disebabkan harga rata-rata per unit: R$ [ANGKA] vs R$ [ANGKA].
-- **[N]** kategori teratas menyumbang 80% revenue.
+- Kategori terlaris berdasarkan unit: **'bed_bath_table'** (10.953 unit).
+- Kategori dengan revenue tertinggi: **'health_beauty'** (R$'1.233.131,72' , 9,33% dari total).
+- Perbedaan keduanya disebabkan harga rata-rata per unit: **R$ 93,44** vs R$ **130,28**.
+- **18** kategori teratas menyumbang 80% revenue.
 
 ### C. Customer
-- Jumlah pelanggan unik: **[JUMLAH]**.
-- Wilayah terbanyak: **[STATE]** ([X]% pelanggan), disusul **[STATE]** dan **[STATE]**.
-- Nilai order paling banyak berada di rentang **[RENTANG]**, rata-rata R$ [ANGKA].
-- Pelanggan repeat hanya **[X]%**, menandakan retensi yang rendah.
+- Jumlah pelanggan unik: **93.358**.
+- Wilayah terbanyak: **São Paulo** (41,94% pelanggan), disusul **Rio de Janeiro** dan **Minas Gerais**.
+- Nilai order paling banyak berada di rentang **di bawah R$ 100** (**58,58%** dari seluruh order), dengan rata-rata R$**137,04**.
+- Pelanggan repeat hanya **3%**, menandakan retensi yang rendah.
 
 ### D. Payment
-- Metode paling banyak: **[METODE]** ([X]% order), menyumbang [X]% total nilai.
-- Cicilan paling umum: **[N]x**. Cicilan panjang (6x atau lebih) lebih sering muncul pada transaksi bernilai besar: **[YA / TIDAK, DENGAN ANGKA]**.
-- Pada transaksi bernilai tinggi (10% teratas), metode dominan adalah **[METODE]** ([X]%).
+- Metode paling banyak: **credit card** (75,31% order), menyumbang 77,02% total nilai.
+- Cicilan paling umum: **1x**. Cicilan panjang (6x atau lebih) lebih sering muncul pada transaksi bernilai besar. **YA** (47,63% pada kelompok tinggi vs 12,62% pada kelompok biasa).
+- Pada transaksi bernilai tinggi (10% teratas), metode dominan adalah **credit card** (81,53%).
 
 ### E. Delivery & Customer Satisfaction
-- Rata-rata waktu pengiriman **[X] hari** (estimasi rata-rata [X] hari).
-- **[X]%** pesanan terlambat dari estimasi.
-- Rating pesanan tepat waktu **[X]** vs pesanan terlambat **[X]**. Semakin lama keterlambatan, semakin rendah rating.
-- Rata-rata rating keseluruhan: **[X]**.
-- State dengan keterlambatan tertinggi: **[STATE]** dan **[STATE]**.
+- Rata-rata waktu pengiriman **12,5 hari** (estimasi rata-rata 24,4 hari).
+- **8,11%** pesanan terlambat dari estimasi.
+- Rating pesanan tepat waktu **4,29** vs pesanan terlambat 1-3 hari **3,59**. Semakin lama keterlambatan, semakin rendah rating.
+- Rata-rata rating keseluruhan: **4,16**.
+- State dengan keterlambatan tertinggi: **Maranhão (MA), dengan 19,67% terlambat** dan **Ceará, dengan 15,32% terlambat (CE)** dari kesuluruhan total dengan dibandingkan rata-rata nasional 8,11%.
 
 ## 9. Dashboard
 
