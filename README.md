@@ -17,7 +17,7 @@ Olist adalah marketplace Brasil yang menghubungkan penjual kecil dengan pelangga
 ## 2. Dataset
 
 - Sumber: [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-- Periode data: **[TANGGAL AWAL] s/d [TANGGAL AKHIR]**
+- Periode data: **[2016] s/d [2018]**
 - 9 file CSV yang saling berelasi (orders, order_items, order_payments, order_reviews, customers, products, sellers, category_translation, geolocation). Tabel geolocation tidak dipakai.
 - File CSV **tidak diunggah** ke repo (ukuran besar dan lisensi dataset). Unduh dari Kaggle, lalu taruh di `data/raw/`.
 
