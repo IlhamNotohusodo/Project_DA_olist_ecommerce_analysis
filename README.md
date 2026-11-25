@@ -17,7 +17,7 @@ Olist adalah marketplace Brasil yang menghubungkan penjual kecil dengan pelangga
 ## 2. Dataset
 
 - Sumber: [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-- Periode data: **[2016] s/d [2018]**
+- Periode data: **[TANGGAL AWAL] s/d [TANGGAL AKHIR]**
 - 9 file CSV yang saling berelasi (orders, order_items, order_payments, order_reviews, customers, products, sellers, category_translation, geolocation). Tabel geolocation tidak dipakai.
 - File CSV **tidak diunggah** ke repo (ukuran besar dan lisensi dataset). Unduh dari Kaggle, lalu taruh di `data/raw/`.
 
@@ -105,11 +105,18 @@ Keputusan utama saat cleaning (isi dengan angka dari notebook):
 - **8,11%** pesanan terlambat dari estimasi.
 - Rating pesanan tepat waktu **4,29** vs pesanan terlambat 1-3 hari **3,59**. Semakin lama keterlambatan, semakin rendah rating.
 - Rata-rata rating keseluruhan: **4,16**.
-- State dengan keterlambatan tertinggi: **Maranhão (MA), dengan 19,67% terlambat** dan **Ceará, dengan 15,32% terlambat (CE)** dari kesuluruhan total dengan dibandingkan rata-rata nasional 8,11%.
+- State dengan keterlambatan tertinggi: **Maranhão (MA), dengan 19,67% terlambat** dan **Ceará, dengan 15,32% terlambat (CE)** dari kesuluruhan total dengan dibandingkan rata-rata nasional **8,11%**.
 
 ## 9. Dashboard
 
-*(Tambahkan screenshot setelah dashboard Power BI selesai.)*
+### Dashboard Preview
+
+![Olist Payment Analysis Dashboard](dashboard/Customer_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Delivery_&_Customer_Satisfaction_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Payment_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Product_Performance_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Sales_Performance_Analysis.png)
+
 
 | Halaman | Isi |
 |---|---|
