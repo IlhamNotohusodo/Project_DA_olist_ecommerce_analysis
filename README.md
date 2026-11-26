@@ -130,10 +130,10 @@ Keputusan utama saat cleaning (isi dengan angka dari notebook):
 
 ## 10. Rekomendasi Bisnis
 
-1. **Perbaiki logistik di [STATE]** yang keterlambatannya tertinggi, karena keterlambatan berkaitan dengan rating rendah.
-2. **Dorong pembelian ulang** (voucher, email pasca-pembelian), karena hanya [X]% pelanggan yang membeli lebih dari sekali.
-3. **Fokus pada kategori bernilai tinggi** seperti [KATEGORI], yang memberi revenue besar dengan unit lebih sedikit.
-4. **Tawarkan cicilan** pada produk bernilai besar, karena [X]% transaksi bernilai tinggi memakai cicilan.
+1. **Perbaiki logistik di Maranhão (MA) dan Ceará (CE)** yang keterlambatannya tertinggi, karena keterlambatan berkaitan dengan rating rendah.
+2. **Dorong pembelian ulang** (voucher, email pasca-pembelian), karena hanya 3% pelanggan yang membeli lebih dari sekali.
+3. **Fokus pada kategori bernilai tinggi** seperti **watches_gifts** (R$ 1,17 juta dari 5.859 unit, sekitar R$ 199 per unit), yang memberi revenue besar dengan unit lebih sedikit.
+4. **Tawarkan cicilan** pada produk bernilai besar atau tinggi, karena 73,94% transaksi bernilai tinggi memakai cicilan.
 
 ## 11. Keterbatasan
 
