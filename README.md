@@ -17,7 +17,7 @@ Olist adalah marketplace Brasil yang menghubungkan penjual kecil dengan pelangga
 ## 2. Dataset
 
 - Sumber: [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-- Periode data: **[TANGGAL AWAL] s/d [TANGGAL AKHIR]**
+- Periode data: **4 September 2016 s/d 17 Oktober 2018**
 - 9 file CSV yang saling berelasi (orders, order_items, order_payments, order_reviews, customers, products, sellers, category_translation, geolocation). Tabel geolocation tidak dipakai.
 - File CSV **tidak diunggah** ke repo (ukuran besar dan lisensi dataset). Unduh dari Kaggle, lalu taruh di `data/raw/`.
 
@@ -131,10 +131,10 @@ Keputusan utama saat cleaning (isi dengan angka dari notebook):
 
 ## 10. Rekomendasi Bisnis
 
-1. **Perbaiki logistik di [STATE]** yang keterlambatannya tertinggi, karena keterlambatan berkaitan dengan rating rendah.
-2. **Dorong pembelian ulang** (voucher, email pasca-pembelian), karena hanya [X]% pelanggan yang membeli lebih dari sekali.
-3. **Fokus pada kategori bernilai tinggi** seperti [KATEGORI], yang memberi revenue besar dengan unit lebih sedikit.
-4. **Tawarkan cicilan** pada produk bernilai besar, karena [X]% transaksi bernilai tinggi memakai cicilan.
+1. **Perbaiki logistik di Maranhão (MA) dan Ceará (CE)** yang keterlambatannya tertinggi, karena keterlambatan berkaitan dengan rating rendah.
+2. **Dorong pembelian ulang** (voucher, email pasca-pembelian), karena hanya 3% pelanggan yang membeli lebih dari sekali.
+3. **Fokus pada kategori bernilai tinggi** seperti **watches_gifts** (R$ 1,17 juta dari 5.859 unit, sekitar R$ 199 per unit), yang memberi revenue besar dengan unit lebih sedikit.
+4. **Tawarkan cicilan** pada produk bernilai besar atau tinggi, karena 73,94% transaksi bernilai tinggi memakai cicilan.
 
 ## 11. Keterbatasan
 
