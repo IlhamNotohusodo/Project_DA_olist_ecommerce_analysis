@@ -111,11 +111,12 @@ Keputusan utama saat cleaning (isi dengan angka dari notebook):
 
 ### Dashboard Preview
 
-![Olist Payment Analysis Dashboard](dashboard/Customer_Analysis.png)
-![Olist Payment Analysis Dashboard](dashboard/Delivery_&_Customer_Satisfaction_Analysis.png)
-![Olist Payment Analysis Dashboard](dashboard/Payment_Analysis.png)
-![Olist Payment Analysis Dashboard](dashboard/Product_Performance_Analysis.png)
 ![Olist Payment Analysis Dashboard](dashboard/Sales_Performance_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Product_Performance_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Customer_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Payment_Analysis.png)
+![Olist Payment Analysis Dashboard](dashboard/Delivery_&_Customer_Satisfaction_Analysis.png)
+
 
 
 | Halaman | Isi |
